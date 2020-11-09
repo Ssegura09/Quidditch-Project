@@ -11,7 +11,12 @@ Scoreboard.destroy_all
 Score.destroy_all
 
 u1 = User.create(username: "Eddie", password: "password", house: "Slytherin")
+u2 = User.create(username: "Stephanie", password: "password", house: "Gryffindor")
+sb1 = Scoreboard.create(name: "Memory Card", highscore: 200)
 sb1 = Scoreboard.create(name: "Memory Card", highscore: 200)
 score1 = Score.create(points: 100, user_id: u1.id, scoreboard_id: sb1.id )
+score1 = Score.create(points: 1000, user_id: u1.id, scoreboard_id: sb1.id )
+score1 = Score.create(points: 200, user_id: u2.id, scoreboard_id: sb1.id )
+score1 = Score.create(points: 2000, user_id: u2.id, scoreboard_id: sb1.id )
 
 puts "we done be seeded"
