@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :users
   resources :scoreboards
   resources :scores
+
+  post "/login", to: "auth#create"
 end
