@@ -1,45 +1,105 @@
-.App {
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 40vw;
   text-align: center;
+  box-shadow: 6px 6px 6px gray;
+  background: white;
+
+
 }
 
-.Nav {
-  text-align: left;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.navbar {
+  display: flex;
+  box-shadow: 4px 4px 6px gray;
+  justify-content: space-between;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.game {
+  display: flex;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
+  max-width: 650px;
+  box-shadow: 4px 4px 10px gray;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  height: 120px;
+  width: 120px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.image-blank {
+  background: url("/src/Components/Images/Hogwarts.jpg") !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  height: 120px;
+  width: 120px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.end-game {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.message {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 60vh;
+  width: 40vw;
+  background: white;
+  box-shadow: 12px 12px 10px gray;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 600px) {
+  .image {
+    height: 100px;
+    width: 110px;
+    margin: 5px;
   }
-  to {
-    transform: rotate(360deg);
+  .message {
+    width: 400px;
+  }
+  .login {
+    width: 400px;
   }
 }
