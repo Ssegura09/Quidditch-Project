@@ -17,6 +17,7 @@ class UsersController < ApplicationController
         else
             render json: {error: "Failed to create user"}, status: :not_acceptable
         end
+        byebug
         
     end
 

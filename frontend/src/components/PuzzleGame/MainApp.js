@@ -20,12 +20,8 @@ function MainApp() {
   
     return (
       <div className="App">
-        <h1 className='title'>React sliding puzzle</h1>
-        <h4>Choose Image</h4>
-        <img className='puzzle-game-image' src="https://i.pinimg.com/736x/09/9c/17/099c17ece56ebccd3289f26946c89c67.jpg"/>
-        <img className='puzzle-game-image' src="https://i.ebayimg.com/images/g/H1MAAOSwcHRdPFKt/s-l300.jpg"/> <br/><br/>
-        <input value={imgUrl} onChange={handleImageChange} />
-        <Board imgUrl={imgUrl} />
+        <Board imgUrl={'https://images.ctfassets.net/usf1vwtuqyxm/5PhTbeywLbYgMoiWen2qqT/2239de4d745d2191ecdad23a8ed07ded/hp-f1-hogwarts-boats-firstyear-square.jpg?fm=jpg'} />
+
       </div>
     );
   }

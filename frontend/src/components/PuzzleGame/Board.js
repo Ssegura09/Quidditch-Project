@@ -6,7 +6,6 @@ import { canSwap, shuffle, swap, isSolved } from "./helpers";
 function Board({ imgUrl }) {
   const [tiles, setTiles] = useState([...Array(TILE_COUNT).keys()]);
   const [isStarted, setIsStarted] = useState(false);
-  console.log("is started:", isStarted);
 
   const shuffleTiles = () => {
     const shuffledTiles = shuffle(tiles);

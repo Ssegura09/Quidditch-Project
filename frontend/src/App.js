@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Login";
 import SignUp from "./SignUp";
-import Games from "./components/Games";
 
 import SortingHat from "./SortingHat";
 import Main from "./components/MemoryGame/Main.js";
@@ -55,7 +54,6 @@ class App extends Component {
             </ul>
           </nav>
           <Switch>
-            <Route exact path='/games' component={Games} />
             <Route exact path='/puzzle' component={MainApp} />
             <Route exact path='/memory' component={Main} />
             <Route exact path='/flood' component={Flood} />
