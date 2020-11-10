@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from "../../Login";
+// import Login from "../../Login";
 import Game from "./Game";
 import Navbar from "./Navbar";
 import EndGame from "./EndGame";
@@ -30,7 +30,7 @@ class Main extends React.Component {
     
 
       <div>
-        {showLogin ? <Login name={this.handleLogin} /> : null}
+        {/* {showLogin ? <Login name={this.handleLogin} /> : null} */}
         {showEndGame ? <EndGame newGame={this.handleEndGame} /> : null}
         <Navbar name={name} score={score} />
         <Game endGame={this.handleEndGame} />
