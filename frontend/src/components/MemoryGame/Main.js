@@ -27,9 +27,7 @@ class Main extends React.Component {
     const { showLogin, name, score, showEndGame } = this.state;
     return (
 
-      
-
-
+    
 
       <div>
         {showLogin ? <Login name={this.handleLogin} /> : null}

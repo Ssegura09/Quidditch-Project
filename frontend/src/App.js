@@ -1,18 +1,22 @@
 import React, { Component } from "react";
 import "./App.css";
-import {BrowserRouter, Route, Link, Switch } from "react-router-dom";
-import SignUp from "./SignUp";
-import Login from "./Login";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import Home from "./Home";
+import Login from "./Login";
+import SignUp from "./SignUp";
 import Games from "./components/Games";
-import Puzzle from "./components/Puzzle";
+
 import SortingHat from "./SortingHat";
+import Main from "./components/MemoryGame/Main.js";
+import Flood from "./components/Flood/src/Flood.js";
+import MainApp from "./components/PuzzleGame/MainApp";
+
 const URLBase = "http://localhost:3000/users/";
 
 class App extends Component {
   state = {
     allUsers: [],
-    name: '',
+    name: "",
     showLogin: true
   };
 
@@ -21,7 +25,7 @@ class App extends Component {
       .then((res) => res.json())
       .then((user) => {
         this.setState({
-          allUsers: user,
+          allUsers: user
         });
       });
   }
@@ -33,49 +37,32 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
+        <div className='App'>
           <nav>
-            <ul className="main-nav">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-              <li>
-                <Link to="/signup">Sign Up</Link>
-              </li>
-              <li>
-                <Link to="/sortinghat">Sorting Hat</Link>
-              </li>
-              <li>
-                <Link to="/components/games">Memory Card Game</Link>
-              </li>
-              <li>
-                <Link to="/components/puzzle">Puzzle Game</Link>
+            <ul className='main-nav'>
+              <li> <Link to='/'>Home</Link></li>
+              <li> <Link to='/login'>Login</Link> </li>
+              <li><Link to='/signup'>Sign Up</Link></li>
+              <li className='dropdown'>
+                Games
+                <div className='dropdown-content'>
+                  <Link to='/sortinghat'>Sorting Hat</Link>
+                  <Link to='/memory'>Memory Game</Link>
+                  <Link to='/flood'>Color Flood</Link>
+                  <Link to='/puzzle'>Picture Puzzle</Link>
+                </div>
               </li>
             </ul>
           </nav>
-
           <Switch>
-            <Route exact path="/components/games">
-              <Games />
-            </Route>
-            <Route exact path="/components/puzzle">
-              <Puzzle />
-            </Route>
-            <Route path="/login">
-              <Login name={this.handleLogin} />
-            </Route>
-            <Route path="/signup">
-              <SignUp />
-            </Route>
-            <Route path="/sortinghat">
-              <SortingHat />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
+            <Route exact path='/games' component={Games} />
+            <Route exact path='/puzzle' component={MainApp} />
+            <Route exact path='/memory' component={Main} />
+            <Route exact path='/flood' component={Flood} />
+            <Route exact path='/login' component={() => <Login name={this.handleLogin} />} />
+            <Route path='/signup' component={SignUp} />
+            <Route path='/sortinghat' component={SortingHat} />
+            <Route path='/' component={Home} />
           </Switch>
         </div>
       </BrowserRouter>
@@ -84,9 +71,3 @@ class App extends Component {
 }
 
 export default App;
-
-{
-  /* <Route path="/login/" component={Login}/>
-<Route path="/signup/" component={SignUp}/>
-<Route path="/sortinghat/" component={SortingHat}/> */
-}
