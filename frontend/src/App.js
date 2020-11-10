@@ -20,15 +20,32 @@ class App extends Component {
     showLogin: true
   };
 
-  componentDidMount() {
-    fetch(URLBase)
+  handleFetch = () => {
+    // m aking this an authenticated route
+    fetch(URLBase, {
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": `Bearer ${localStorage.token}`
+      }
+    })
       .then((res) => res.json())
       .then((user) => {
         this.setState({
           allUsers: user
         });
       });
-  }
+  };
+
+   // componentDidMount() {
+  //   fetch(URLBase)
+  //     .then((res) => res.json())
+  //     .then((user) => {
+  //       this.setState({
+  //         allUsers: user
+  //       });
+  //     });
+  // }
 
   handleLogin = (name, boolean) => {
     this.setState({ name: name, showLogin: boolean });
