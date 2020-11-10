@@ -52,7 +52,7 @@ class Flood extends Component {
     return (
       <div className="content">
         <div className="header">
-          <h1>Color Flood</h1>
+          <h1 className ='title'>Color Flood</h1>
           <div className="newgame" onClick={(e) => this.restart()}>New Game</div>
           <div className="count">Changes <span>{this.state.count}</span></div>
         </div>
