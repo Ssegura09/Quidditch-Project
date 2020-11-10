@@ -17,11 +17,10 @@ class SignUp extends Component {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({
+      body: JSON.stringify({user:{
         username: this.state.username,
-        password: this.state.password,
-        house: this.state.house
-      })
+        password: this.state.password
+      }})
     })
     .then(res => res.json())
     .then(console.log)
@@ -34,8 +33,8 @@ class SignUp extends Component {
         <h3>Sign Up</h3>
         <form onSubmit={(e) => this.handleSubmit(e)}>
             <input onChange = {(e) => this.handleChange(e)} name='username' type='text' placeholder='Username'/>
-            <input onChange = {(e) => this.handleChange(e)} name='password' type='text' placeholder='Password'/>
-            <input onChange = {(e) => this.handleChange(e)} name='house' type='text' placeholder='House'/>
+            <input onChange = {(e) => this.handleChange(e)} name='password' type='password' placeholder='Password'/>
+            {/* <input onChange = {(e) => this.handleChange(e)} name='house' type='text' placeholder='House'/> */}
             <input type='submit'/>
         </form>
       </div>

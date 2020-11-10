@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-import { BrowserRoute, BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import {BrowserRoute, BrowserRouter, Route, Link, Switch,} from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import Home from "./Home";
-import Games from './components/Games'
+import Games from "./components/Games";
+import Puzzle from "./components/Puzzle";
+import SortingHat from "./SortingHat";
 const URLBase = "http://localhost:3000/users/";
 
 class App extends Component {
@@ -38,14 +40,23 @@ class App extends Component {
                 <Link to="/signup">Sign Up</Link>
               </li>
               <li>
-                <Link to="/components/games">Games</Link>
+                <Link to="/sortinghat">Sorting Hat</Link>
+              </li>
+              <li>
+                <Link to="/components/games">Memory Card Game</Link>
+              </li>
+              <li>
+                <Link to="/components/puzzle">Puzzle Game</Link>
               </li>
             </ul>
           </nav>
-          {/* <Games/> */}
+
           <Switch>
             <Route exact path="/components/games">
-            <Games/>
+              <Games />
+            </Route>
+            <Route exact path="/components/puzzle">
+              <Puzzle />
             </Route>
             <Route path="/login">
               <Login />
@@ -53,13 +64,15 @@ class App extends Component {
             <Route path="/signup">
               <SignUp />
             </Route>
+            <Route path="/sortinghat">
+              <SortingHat />
+            </Route>
             <Route path="/">
               <Home />
             </Route>
           </Switch>
         </div>
       </BrowserRouter>
-
     );
   }
 }
