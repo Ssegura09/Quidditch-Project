@@ -10,6 +10,7 @@ User.destroy_all
 Scoreboard.destroy_all
 Score.destroy_all
 
+
 u1 = User.create(username: "Eddie", password: "password", house: "Slytherin")
 u2 = User.create(username: "Stephanie", password: "password", house: "Gryffindor")
 sb1 = Scoreboard.create(name: "Memory Card", highscore: 200)
