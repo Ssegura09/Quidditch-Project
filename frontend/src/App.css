@@ -11,6 +11,10 @@
   list-style-type: none;
 }
 
+.title {
+  color: black;
+}
+
 
 .login {
   display: flex;
@@ -123,7 +127,7 @@ h1 {
 .tile {
   position: absolute;
   list-style: none;
-  background: #ec6f66;
+  background: black;
   display: grid;
   place-items: center;
   font-size: 20px;
@@ -131,3 +135,9 @@ h1 {
 button {
   display: block;
 }
+
+.puzzle-game-image {
+  height: 120px;
+  width: 120px;
+}
+
