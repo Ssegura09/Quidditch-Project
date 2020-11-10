@@ -8,7 +8,7 @@ import Ron from './Ron.jpg'
 import Tom from './Tom.jpg'
 import Umbridge from './Umbridge.jpeg'
 import Voldemort from './Voldemort.jpg'
-import hogwarts from './Hogwarts.jpg'
+import Hogwarts from './Hogwarts.jpg'
 
 export let images =[
     {name: 'Bellatrix',
@@ -94,4 +94,4 @@ export let images =[
     
 ];
 
-export const blankCard = hogwarts
+export const blankCard = Hogwarts

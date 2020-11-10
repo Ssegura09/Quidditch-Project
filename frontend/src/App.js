@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import {BrowserRoute, BrowserRouter, Route, Link, Switch,} from "react-router-dom";
+import {BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import Home from "./Home";
@@ -12,6 +12,8 @@ const URLBase = "http://localhost:3000/users/";
 class App extends Component {
   state = {
     allUsers: [],
+    name: '',
+    showLogin: true
   };
 
   componentDidMount() {
@@ -23,6 +25,10 @@ class App extends Component {
         });
       });
   }
+
+  handleLogin = (name, boolean) => {
+    this.setState({ name: name, showLogin: boolean });
+  };
 
   render() {
     return (
@@ -59,7 +65,7 @@ class App extends Component {
               <Puzzle />
             </Route>
             <Route path="/login">
-              <Login />
+              <Login name={this.handleLogin} />
             </Route>
             <Route path="/signup">
               <SignUp />
