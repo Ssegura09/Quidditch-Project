@@ -21,6 +21,7 @@ function MainApp() {
     return (
       <div className="App">
         <Board imgUrl={'https://images.ctfassets.net/usf1vwtuqyxm/5PhTbeywLbYgMoiWen2qqT/2239de4d745d2191ecdad23a8ed07ded/hp-f1-hogwarts-boats-firstyear-square.jpg?fm=jpg'} />
+
       </div>
     );
   }
