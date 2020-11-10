@@ -49,6 +49,8 @@ class Images extends React.Component {
     return false;
   };
 
+
+  //Add flip functionality as a stretch goal
   switch = (target) => {
     if (target.getAttribute("check") === "true") {
       target.setAttribute("check", "false");
@@ -59,7 +61,7 @@ class Images extends React.Component {
     }
   };
   render() {
-      {console.log(images)}
+
     return (
       <div className='images'>
         {images

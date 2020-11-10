@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Main from './MemoryGame/Main.js';
+import GameSelection from './GameSelection';
 
 
 class Games extends Component {
@@ -8,7 +8,8 @@ class Games extends Component {
         return ( 
             <div>
                 <h2>Games</h2>
-                <Main/>
+                <GameSelection />
+                
             </div>
          );
     }

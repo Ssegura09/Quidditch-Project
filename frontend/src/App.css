@@ -57,8 +57,8 @@
 }
 
 .image-blank {
-  background: url("/src/Components/Images/Hogwarts.jpg") !important;
-  background-size: contain !important;
+  background: url("/Hogwarts.png") !important;
+  background-size: 150px 150px !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   height: 120px;

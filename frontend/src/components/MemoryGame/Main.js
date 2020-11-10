@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Login from "./Login";
+import React from 'react';
+import Login from "../../Login";
 import Game from "./Game";
 import Navbar from "./Navbar";
 import EndGame from "./EndGame";
@@ -26,6 +26,11 @@ class Main extends React.Component {
   render() {
     const { showLogin, name, score, showEndGame } = this.state;
     return (
+
+      
+
+
+
       <div>
         {showLogin ? <Login name={this.handleLogin} /> : null}
         {showEndGame ? <EndGame newGame={this.handleEndGame} /> : null}
