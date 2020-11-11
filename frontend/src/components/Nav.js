@@ -1,0 +1,36 @@
+import React from 'react';
+import {Link} from 'react-router-dom'
+
+class Nav extends React.Component {
+  render() {
+    return (
+      <nav>
+        <ul className="main-nav">
+          <li>
+            {" "}
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            {" "}
+            <Link to="/login">Login</Link>{" "}
+          </li>
+          <li>
+            <Link to="/signup">Sign Up</Link>
+          </li>
+          {localStorage.token ? (
+            <li className="dropdown">
+              Games
+              <div className="dropdown-content">
+                <Link to="/sortinghat">Sorting Hat</Link>
+                <Link to="/memory">Memory Game</Link>
+                <Link to="/flood">Color Flood</Link>
+                <Link to="/puzzle">Picture Puzzle</Link>
+              </div>
+            </li>
+          ) : null}
+        </ul>
+      </nav>
+    );
+  }
+}
+export default Nav
