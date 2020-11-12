@@ -19,13 +19,13 @@ class Flood extends Component {
       size: SIZE,
       graph: new Graph(SIZE),
       colors: COLORS,
-      count: 0
+      count: 0,
     };
   }
 
   incrementCount() {
     this.setState({
-      count: this.state.count + 1
+      count: this.state.count + 1,
     });
   }
 
@@ -35,8 +35,8 @@ class Flood extends Component {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json",
-          Authorization: `Bearer ${localStorage.token}`
+          Accept: "application/json",
+          Authorization: `Bearer ${localStorage.token}`,
         },
         body: JSON.stringify({
           name: "Color Flood",
@@ -65,7 +65,7 @@ class Flood extends Component {
 
     this.setState({
       graph: new Graph(this.state.size),
-      count: 0
+      count: 0,
     });
   }
 
@@ -73,7 +73,7 @@ class Flood extends Component {
     this.setState({
       size: value,
       graph: this.newGrid(value, this.state.colors),
-      count: 0
+      count: 0,
     });
   }
 
@@ -83,17 +83,19 @@ class Flood extends Component {
 
   render() {
     return (
-      <div className='content'>
-        <div className='header'>
-          <h1 className='title'>Color Flood</h1>
-          <div className='newgame' onClick={(e) => this.restart()}>
-            New Game
-          </div>
-          <div className='count'>
-            Changes <span>{this.state.count}</span>
-          </div>
-        </div>
-        {/*        <div className="sizeChanger">
+      <div className="background-flood">
+        <div className = "flood-container">
+          <div className="content">
+            <div className="header">
+              <h1 className="title">Color Flood</h1>
+              <div className="newgame" onClick={(e) => this.restart()}>
+                New Game
+              </div>
+              <div className="count">
+                Changes <span>{this.state.count}</span>
+              </div>
+            </div>
+            {/*        <div className="sizeChanger">
           <span className="size-value">{this.state.size}</span>
           <input
             type="range"
@@ -103,18 +105,20 @@ class Flood extends Component {
             step="1"
             onChange={(e) => this.sliderInput(e.target.value)} />
         </div>*/}
-        <div>
-          <ColorPickers
-            colors={this.state.colors}
-            clickHandler={this.colorFill}
-            incrementCount={this.incrementCount}
-          />
+            <div>
+              <ColorPickers
+                colors={this.state.colors}
+                clickHandler={this.colorFill}
+                incrementCount={this.incrementCount}
+              />
+            </div>
+            <Grid
+              grid={this.state.graph}
+              colors={this.state.colors}
+              size={this.state.size}
+            />
+          </div>
         </div>
-        <Grid
-          grid={this.state.graph}
-          colors={this.state.colors}
-          size={this.state.size}
-        />
       </div>
     );
   }

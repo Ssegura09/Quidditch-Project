@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // import Login from "../../Login";
 import Game from "./Game";
 import Navbar from "./Navbar";
@@ -12,7 +12,6 @@ class Main extends React.Component {
     score: 100,
   };
 
-
   handleEndGame = (boolean) => {
     if (boolean) {
       this.setState({ showEndGame: boolean, score: this.state.score + 1 });
@@ -23,14 +22,11 @@ class Main extends React.Component {
   render() {
     const { showLogin, name, score, showEndGame } = this.state;
     return (
-
-    
-
-      <div>
-        {showEndGame ? <EndGame newGame={this.handleEndGame} /> : null}
-        <Navbar name={name} score={score} />
-        <Game score={score} endGame={this.handleEndGame} />
-      </div>
+        <div>
+          {showEndGame ? <EndGame newGame={this.handleEndGame} /> : null}
+          <Navbar name={name} score={score} />
+          <Game score={score} endGame={this.handleEndGame} />
+        </div>
     );
   }
 }

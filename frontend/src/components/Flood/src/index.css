@@ -1,92 +1,141 @@
 body {
-  margin: 0;
-  padding: 0;
   font-family: Sans-Serif;
-  background-color: #ffffff;
 }
 
+/* ---- flood container for formatting ---- */
+
+.background-flood {
+  background-image: url("https://static.wikia.nocookie.net/harrypotter/images/c/c0/QuidditchWorldCup.png/revision/latest?cb=20140329010247");
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: 1430px 750px;
+  justify-content: center;
+  align-items: center;
+  background-size: 1425px 900px;
+}
+
+.flood-container {
+  height: 100vh;
+  width: 40vw;
+  margin: 0;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* ---- flood container for formatting ---- */
+
+/* ---- memory container for formatting ---- */
+.memory-background {
+  background-image: url("https://static.wikia.nocookie.net/harrypotter/images/c/c0/QuidditchWorldCup.png/revision/latest?cb=20140329010247");
+  height: 130vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: 1430px 750px;
+  justify-content: center;
+  align-items: center;
+  background-size: 1425px 1000px;
+}
+
+.memory-container {
+  display: flex;
+  height: 130vh;
+  justify-content: center;
+  align-items: center;
+ 
+}
+/* ---- memory container for formatting ---- */
+
 h1 {
-	margin: 0;
-	color: #f6f7ee;
+  margin: 0;
+  color: #f6f7ee;
 }
 
 .header {
-	margin-top: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	min-width: 360px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 360px;
 }
 
 .count {
-	padding: 2px;
-	font-size: 10pt;
-	border-width: 1px;
-	border-style: solid;
-	background-color: #23221c;
-	color: #686964;
+  padding: 2px;
+  font-size: 10pt;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #23221c;
+  color: #686964;
 }
 
 .count span {
-	text-align: center;
-	font-size: 16pt;
-	display: block;
+  text-align: center;
+  font-size: 16pt;
+  display: block;
 }
 
 .content {
-	max-width: 80vh;
+  max-width: 80vh;
 }
 
 .newgame {
-	white-space: nowrap;
-	margin-right: 10px;
-	padding: 5px;
-	background: linear-gradient(to bottom, #e0e0e0, #b0b0b0);
-	cursor: pointer;
-	margin: 0;
+  white-space: nowrap;
+  margin-right: 10px;
+  padding: 5px;
+  background: linear-gradient(to bottom, #e0e0e0, #b0b0b0);
+  cursor: pointer;
+  margin: 0;
 }
-
 
 /* ------- Dropdown Menu Selector ---------- */
 
 /* Dropdown Button */
 .dropbtn {
-	background-color: #4CAF50;
-	color: white;
-	padding: 16px;
-	font-size: 16px;
-	border: none;
-	}
-	
-	/* The container <div> - needed to position the dropdown content */
-	.dropdown {
-	position: relative;
-	display: inline-block;
-	}
-	
-	/* Dropdown Content (Hidden by Default) */
-	.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f1f1f1;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
-	}
-	
-	/* Links inside the dropdown */
-	.dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	}
-	
-	/* Change color of dropdown links on hover */
-	.dropdown-content a:hover {background-color: #ddd;}
-	
-	/* Show the dropdown menu on hover */
-	.dropdown:hover .dropdown-content {display: block;}
-	
-	/* Change the background color of the dropdown button when the dropdown content is shown */
-	.dropdown:hover .dropbtn {background-color: #3e8e41;}
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}

@@ -2,13 +2,13 @@
 .welcome-background {
   background-image: url("https://static.wikia.nocookie.net/harrypotter/images/c/c0/QuidditchWorldCup.png/revision/latest?cb=20140329010247");
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   width: 100vw;
   background-repeat: no-repeat;
-  background-size: 1425px 728px;
-  /* background-size: 1425px 900px; */
+  background-size: 1430px 750px;
+  justify-content: center;
+  align-items: center;
+  background-size: 1425px 900px;
 }
 
 /* ---- sorting hat ---- */
@@ -73,6 +73,7 @@
   width: 100vw;
 }
 
+
 /* .main-nav {
   list-style-type: none;
   
@@ -98,13 +99,13 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-/* li a:hover {
+ /* li a:hover {
   background-color: #111;
-}  */ 
+}   */ 
 
-.title {
+ .title {
   color: black;
-} 
+}  
 
 
 .login {
@@ -126,12 +127,12 @@ li a {
   justify-content: space-between;
 }
 
-.game {
+/* .memory-container {
   display: flex;
   height: 85vh;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .images {
   display: flex;
