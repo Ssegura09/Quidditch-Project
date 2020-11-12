@@ -9,12 +9,9 @@ class Main extends React.Component {
     showLogin: true,
     showEndGame: false,
     name: "",
-    score: 0,
+    score: 100,
   };
 
-  handleLogin = (name, boolean) => {
-    this.setState({ name: name, showLogin: boolean });
-  };
 
   handleEndGame = (boolean) => {
     if (boolean) {
@@ -30,10 +27,9 @@ class Main extends React.Component {
     
 
       <div>
-        {/* {showLogin ? <Login name={this.handleLogin} /> : null} */}
         {showEndGame ? <EndGame newGame={this.handleEndGame} /> : null}
         <Navbar name={name} score={score} />
-        <Game endGame={this.handleEndGame} />
+        <Game score={score} endGame={this.handleEndGame} />
       </div>
     );
   }

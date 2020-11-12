@@ -38,6 +38,7 @@ class Images extends React.Component {
         this.characters = [];
       }
     }
+      
   };
 
   checkName = (character1, character2) => {
