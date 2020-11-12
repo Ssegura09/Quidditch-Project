@@ -83,7 +83,7 @@ class Flood extends Component {
 
   render() {
     return (
-      <div className="background-flood">
+      <div className="welcome-background">
         <div className = "flood-container">
           <div className="content">
             <div className="header">
