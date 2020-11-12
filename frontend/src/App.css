@@ -6,12 +6,54 @@
   -o-background-size: cover;
   background-size: cover;
   display: flex;
-  height: 135vh;
+  height: 90vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
   background-size: 1570px 700px;
 }
+
+/* ---- puzzle container for formatting ---- */
+
+.puzzle-container {
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 400px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.puzzle-board {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.puzzle-title{
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.puzzle-button {
+  margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* ---- puzzle container for formatting ---- */
+
 /* ---- sorting hat ---- */
 
 .house-prompt {
@@ -33,15 +75,6 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
-/* .house-results {
-  margin: 0;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-} */
 
 .sort-hat-container {
   background-color: white;
@@ -107,7 +140,9 @@ li a:hover {
 }  
 
 /* Change the link color to #111 (black) on hover */
-
+ li a:hover {
+  background-color: #111;
+}   
 
 .title {
   color: black;
@@ -129,13 +164,6 @@ li a:hover {
   box-shadow: 4px 4px 6px gray;
   justify-content: space-between;
 }
-
-/* .memory-container {
-  display: flex;
-  height: 85vh;
-  justify-content: center;
-  align-items: center;
-} */
 
 .images {
   display: flex;
@@ -230,79 +258,4 @@ button {
 .puzzle-game-image {
   height: 120px;
   width: 120px;
-}
-
-
-
-
-/* <---- don't use ----> */
-/* ---- memory container for formatting ---- */
-/* .memory-background {
-  background: url(frontImages/mainImage.png);
- 
-  background-size: 1430px 750px;
-  justify-content: center;
-  align-items: center;
-  background-size: 1425px 1000px;
-} */
-
-/* .memory-container {
-  display: flex;
-  height: 130vh;
-  justify-content: center;
-  align-items: center;
-} */
-/* ---- memory container for formatting ---- */
-
-
-
-/* ------- Dropdown Menu Selector ---------- */
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: #4caf50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-}
-
-/* Links inside the dropdown */
-.dropdown-content Link{
-  color: rgb(255, 255, 255);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-  z-index: 999;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
 }
