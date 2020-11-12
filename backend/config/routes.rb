@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :scores
 
   post "/login", to: "auth#create"
+  post '/scoreboards', to: 'scoreboards#create'
+  post '/scores', to: 'scores#create'
 end

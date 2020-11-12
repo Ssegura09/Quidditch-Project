@@ -41,11 +41,26 @@ class Flood extends Component {
         body: JSON.stringify({
           name: "Color Flood",
           highscore: `${this.state.count}`,
-        }),
+          user: `${this.props.user.username}`
+        })
       };
       fetch("http://localhost:3000/scoreboards", requestOptions)
         .then((res) => res.json())
         .then((data) => console.log(data));
+
+      fetch('http://localhost:3000/scores',{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+          Authorization: `Bearer ${localStorage.token}`
+        },
+        body: JSON.stringify({
+          score:{
+          score: `${this.state.count}`,
+          user: `${this.props.user.username}`,        
+        }})
+      })
     }
 
     this.setState({
@@ -72,7 +87,7 @@ class Flood extends Component {
         <div className = "flood-container">
           <div className="content">
             <div className="header">
-              <h1 className="title">Color Flood</h1>
+              <h1 className="title">Hogwarts House Color Flood</h1>
               <div className="newgame" onClick={(e) => this.restart()}>
                 New Game
               </div>

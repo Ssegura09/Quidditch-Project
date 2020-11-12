@@ -17,7 +17,8 @@ class App extends Component {
     allUsers: [],
     name: "",
     showLogin: true,
-    loggedIn: false
+    loggedIn: false,
+    user: ""
   };
 
   handleFetch = () => {
@@ -26,61 +27,72 @@ class App extends Component {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
-        Authorization: `Bearer ${localStorage.token}`,
-      },
+        Authorization: `Bearer ${localStorage.token}`
+      }
     })
       .then((res) => res.json())
       .then((user) => {
         this.setState({
-          allUsers: user,
+          allUsers: user
         });
       });
   };
 
   logIn = (user) => {
-
     fetch("http://localhost:3000/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
+        Accept: "application/json"
       },
       body: JSON.stringify({
         user: user
-      }),
+      })
     })
       .then((res) => res.json())
       .then((userInfo) => {
         console.log(userInfo);
         if (userInfo.token) {
           localStorage.token = userInfo.token;
-          this.setState({
-            loggedIn: true
-          },() => <Redirect to={'/'}/>)
+          this.setState(
+            {
+              loggedIn: true,
+              user: user
+            },
+            () => <Redirect to={"/"} />
+          );
         }
       });
-    };
-  
-
-
+  };
 
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
-          <Nav/>
+        <div className='App'>
+          <Nav />
           <Switch>
-            <Route exact path="/puzzle" component={MainApp} />
-            <Route exact path="/memory" component={Main} />
-            <Route exact path="/flood" component={Flood} />
-            <Route
-              exact
-              path="/login">
-              {this.state.loggedIn ? <Redirect to='/'/> : (rp) => <Login  {...rp} logIn={this.logIn} />}
+            <Route exact path='/puzzle' component={MainApp} />
+            <Route exact path='/memory' component={Main} />
+            <Route exact path='/flood'>
+              {<Flood user={this.state.user}/>}
             </Route>
-            <Route path="/signup" component={SignUp} />
-            <Route path="/sortinghat" component={SortingHat} />
-            <Route path="/" component={Home} />
+            <Route exact path='/login'>
+              {this.state.loggedIn ? (
+                <Redirect to='/' />
+              ) : (
+                (rp) => <Login {...rp} logIn={this.logIn} />
+              )}
+            </Route>
+            <Route exact path='/signup'>
+            {this.state.loggedIn ? (
+                <Redirect to='/' />
+              ) : (
+                (rp) => <SignUp {...rp} logIn={this.logIn} />
+              )}
+              {/* {<SignUp login={this.logIn}/>} */}
+              </Route>
+            <Route path='/sortinghat' component={SortingHat} />
+            <Route path='/' component={Home} />
           </Switch>
         </div>
       </BrowserRouter>
