@@ -5,7 +5,7 @@ class Game extends React.Component {
   render() {
     return (
       <div className="game">
-        <Images endGame={this.props.endGame} />
+        <Images score={this.props.score} endGame={this.props.endGame} />
       </div>
     );
   }
