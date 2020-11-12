@@ -52,19 +52,21 @@ function Board({ imgUrl }) {
       ) : (
         <button onClick={() => handleShuffleClick()}>Restart game</button>
       )}
-      <ul style={style} className="board">
-        {tiles.map((tile, index) => (
-          <Tile
-            key={tile}
-            index={index}
-            imgUrl={imgUrl}
-            tile={tile}
-            width={pieceWidth}
-            height={pieceHeight}
-            handleTileClick={handleTileClick}
-          />
-        ))}
-      </ul>
+      <div className="puzzle-board">
+        <ul style={style} className="board">
+          {tiles.map((tile, index) => (
+            <Tile
+              key={tile}
+              index={index}
+              imgUrl={imgUrl}
+              tile={tile}
+              width={pieceWidth}
+              height={pieceHeight}
+              handleTileClick={handleTileClick}
+            />
+          ))}
+        </ul>
+      </div>
     </>
   );
 }

@@ -1,19 +1,20 @@
 /* ---- home page ---- */
 .welcome-background {
-  background-image: url("https://static.wikia.nocookie.net/harrypotter/images/c/c0/QuidditchWorldCup.png/revision/latest?cb=20140329010247");
+  background: url(frontImages/mainImage.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   display: flex;
-  height: 100vh;
+  height: 135vh;
   width: 100vw;
-  background-repeat: no-repeat;
-  background-size: 1430px 750px;
   justify-content: center;
   align-items: center;
-  background-size: 1425px 900px;
+  background-size: 1570px 700px;
 }
-
 /* ---- sorting hat ---- */
 
-.house-prompt{
+.house-prompt {
   margin: 0;
   position: absolute;
   top: 10%;
@@ -44,11 +45,13 @@
 
 .sort-hat-container {
   background-color: white;
-  justify-content: center;
-  align-items: center;
   height: 400px;
   width: 400px;
   position: relative;
+  top: 50;
+  bottom: 0;
+  right: 50;
+  width: 300px;
   border: 3px solid green;
 }
 
@@ -99,14 +102,13 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
- /* li a:hover {
+/* li a:hover {
   background-color: #111;
-}   */ 
+}   */
 
- .title {
+.title {
   color: black;
-}  
-
+}
 
 .login {
   display: flex;
@@ -117,8 +119,6 @@ li a {
   text-align: center;
   box-shadow: 6px 6px 6px gray;
   background: white;
-
-
 }
 /* ---- navbar for memory game ---- */
 .navbar {
@@ -205,10 +205,6 @@ li a {
 }
 /* ---- navbar for memory game ---- */
 
-/* .App {
-  
-} */
-/* ---- puzzle game ---- */
 h1 {
   margin: 0;
 }
@@ -236,4 +232,21 @@ button {
 
 
 
+/* <---- don't use ----> */
+/* ---- memory container for formatting ---- */
+/* .memory-background {
+  background: url(frontImages/mainImage.png);
+ 
+  background-size: 1430px 750px;
+  justify-content: center;
+  align-items: center;
+  background-size: 1425px 1000px;
+} */
 
+/* .memory-container {
+  display: flex;
+  height: 130vh;
+  justify-content: center;
+  align-items: center;
+} */
+/* ---- memory container for formatting ---- */
