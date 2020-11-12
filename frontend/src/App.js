@@ -83,7 +83,14 @@ class App extends Component {
                 (rp) => <Login {...rp} logIn={this.logIn} />
               )}
             </Route>
-            <Route path='/signup' component={SignUp} />
+            <Route exact path='/signup'>
+            {this.state.loggedIn ? (
+                <Redirect to='/' />
+              ) : (
+                (rp) => <SignUp {...rp} logIn={this.logIn} />
+              )}
+              {/* {<SignUp login={this.logIn}/>} */}
+              </Route>
             <Route path='/sortinghat' component={SortingHat} />
             <Route path='/' component={Home} />
           </Switch>

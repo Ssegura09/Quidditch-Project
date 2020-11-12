@@ -87,7 +87,7 @@ class Flood extends Component {
         <div className = "flood-container">
           <div className="content">
             <div className="header">
-              <h1 className="title">Color Flood</h1>
+              <h1 className="title">Hogwarts House Color Flood</h1>
               <div className="newgame" onClick={(e) => this.restart()}>
                 New Game
               </div>
