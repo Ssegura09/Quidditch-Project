@@ -6,12 +6,54 @@
   -o-background-size: cover;
   background-size: cover;
   display: flex;
-  height: 135vh;
+  height: 90vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
   background-size: 1570px 700px;
 }
+
+/* ---- puzzle container for formatting ---- */
+
+.puzzle-container {
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 400px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.puzzle-board {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.puzzle-title{
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.puzzle-button {
+  margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* ---- puzzle container for formatting ---- */
+
 /* ---- sorting hat ---- */
 
 .house-prompt {
@@ -33,15 +75,6 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
-/* .house-results {
-  margin: 0;
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-} */
 
 .sort-hat-container {
   background-color: white;
@@ -77,7 +110,7 @@
 }
 
 
-/* .main-nav {
+.main-nav {
   list-style-type: none;
   
 }
@@ -85,7 +118,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
   background-color: #333;
 }
 
@@ -95,16 +128,16 @@
 
 li a {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 /* Change the link color to #111 (black) on hover */
-/* li a:hover {
+ li a:hover {
   background-color: #111;
-}   */
+}   
 
 .title {
   color: black;
@@ -127,21 +160,13 @@ li a {
   justify-content: space-between;
 }
 
-/* .memory-container {
-  display: flex;
-  height: 85vh;
-  justify-content: center;
-  align-items: center;
-} */
-
 .images {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   height: auto;
   width: auto;
-  max-width: 650px;
-  box-shadow: 4px 4px 10px gray;
+  max-width: 800px;
 }
 
 .image {
@@ -228,25 +253,3 @@ button {
   height: 120px;
   width: 120px;
 }
-
-
-
-
-/* <---- don't use ----> */
-/* ---- memory container for formatting ---- */
-/* .memory-background {
-  background: url(frontImages/mainImage.png);
- 
-  background-size: 1430px 750px;
-  justify-content: center;
-  align-items: center;
-  background-size: 1425px 1000px;
-} */
-
-/* .memory-container {
-  display: flex;
-  height: 130vh;
-  justify-content: center;
-  align-items: center;
-} */
-/* ---- memory container for formatting ---- */
