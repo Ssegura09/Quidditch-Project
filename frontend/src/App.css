@@ -1,3 +1,69 @@
+/* ---- home page ---- */
+.welcome-background {
+  background-image: url("https://static.wikia.nocookie.net/harrypotter/images/c/c0/QuidditchWorldCup.png/revision/latest?cb=20140329010247");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: 1425px 728px;
+  /* background-size: 1425px 900px; */
+}
+
+/* ---- sorting hat ---- */
+
+.house-prompt{
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.house-image {
+  height: 200px;
+  width: 200px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* .house-results {
+  margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+} */
+
+.sort-hat-container {
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 400px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.sort-hat-button {
+  margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* ---- sorting hat ---- */
+
+/* ---- home page ---- */
 .wrapper {
   display: flex;
   justify-content: center;
@@ -9,11 +75,36 @@
 
 .main-nav {
   list-style-type: none;
+  
 }
+.main-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+} 
 
 .title {
   color: black;
-}
+} 
 
 
 .login {
@@ -28,7 +119,7 @@
 
 
 }
-
+/* ---- navbar for memory game ---- */
 .navbar {
   display: flex;
   box-shadow: 4px 4px 6px gray;
@@ -111,12 +202,12 @@
     width: 400px;
   }
 }
+/* ---- navbar for memory game ---- */
 
 /* .App {
-  display: grid;
-  place-items: center;
-  height: 100vh;
+  
 } */
+/* ---- puzzle game ---- */
 h1 {
   margin: 0;
 }
@@ -140,4 +231,8 @@ button {
   height: 120px;
   width: 120px;
 }
+
+
+
+
 

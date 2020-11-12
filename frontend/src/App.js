@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Link, Switch, Redirect } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Login";
 import SignUp from "./SignUp";
-
 import SortingHat from "./SortingHat";
 import Main from "./components/MemoryGame/Main.js";
 import Flood from "./components/Flood/src/Flood.js";
