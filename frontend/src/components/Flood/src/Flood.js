@@ -40,12 +40,27 @@ class Flood extends Component {
         },
         body: JSON.stringify({
           name: "Color Flood",
-          highscore: `${this.state.count}`
+          highscore: `${this.state.count}`,
+          user: `${this.props.user.username}`
         })
       };
       fetch("http://localhost:3000/scoreboards", requestOptions)
         .then((res) => res.json())
         .then((data) => console.log(data));
+
+      fetch('http://localhost:3000/scores',{
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+          Authorization: `Bearer ${localStorage.token}`
+        },
+        body: JSON.stringify({
+          score:{
+          score: `${this.state.count}`,
+          user: `${this.props.user.username}`,        
+        }})
+      })
     }
 
     this.setState({
