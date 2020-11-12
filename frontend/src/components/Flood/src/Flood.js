@@ -4,6 +4,7 @@ import ColorPickers from "./components/ColorPickers/ColorPickers";
 import { Graph } from "./Graph";
 
 import "./index.css";
+import Leaderboard from "../../Leaderboard";
 
 const SIZE = 12;
 const COLORS = ["blue", "red", "green", "yellow", "orange"];
@@ -26,6 +27,7 @@ class Flood extends Component {
   incrementCount() {
     this.setState({
       count: this.state.count + 1,
+      user: ''
     });
   }
 
@@ -57,10 +59,13 @@ class Flood extends Component {
         },
         body: JSON.stringify({
           score:{
-          score: `${this.state.count}`,
-          user: `${this.props.user.username}`,        
-        }})
+            score: `${this.state.count}`,
+            user: `${this.props.user.username}`,        
+          }
+        })
       })
+      // .then(res => res.json())
+      .then(data => console.log('this is my scores', data))
     }
 
     this.setState({
@@ -117,6 +122,7 @@ class Flood extends Component {
               colors={this.state.colors}
               size={this.state.size}
             />
+            <Leaderboard />
           </div>
         </div>
       </div>

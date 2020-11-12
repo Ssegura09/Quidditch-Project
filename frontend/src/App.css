@@ -77,7 +77,7 @@
 }
 
 
-/* .main-nav {
+.main-nav {
   list-style-type: none;
   
 }
@@ -85,7 +85,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
   background-color: #333;
 }
 
@@ -95,16 +95,19 @@
 
 li a {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  overflow: visible;
 }
+li a:hover {
+ background-color: rgb(255, 255, 255);
+ overflow: visible;
+}  
 
 /* Change the link color to #111 (black) on hover */
-/* li a:hover {
-  background-color: #111;
-}   */
+
 
 .title {
   color: black;
@@ -140,8 +143,8 @@ li a {
   flex-wrap: wrap;
   height: auto;
   width: auto;
-  max-width: 650px;
-  box-shadow: 4px 4px 10px gray;
+  max-width: 800px;
+  /* box-shadow: 4px 4px 10px gray; */
 }
 
 .image {
@@ -250,3 +253,56 @@ button {
   align-items: center;
 } */
 /* ---- memory container for formatting ---- */
+
+
+
+/* ------- Dropdown Menu Selector ---------- */
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+/* Links inside the dropdown */
+.dropdown-content Link{
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  z-index: 999;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
