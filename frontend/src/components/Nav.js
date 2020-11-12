@@ -6,15 +6,15 @@ class Nav extends React.Component {
     return (
       <nav>
         <ul className="main-nav">
-          <li>
+          <li className="dropdown">
             {" "}
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="dropdown">
             {" "}
             <Link to="/login">Login</Link>{" "}
           </li>
-          <li>
+          <li className="dropdown">
             <Link to="/signup">Sign Up</Link>
           </li>
           {localStorage.token ? (
