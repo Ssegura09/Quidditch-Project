@@ -28,7 +28,7 @@ class SortingHat extends Component {
         <div className="sort-hat-container">
           {/* <img className="starry-night" src={require("./frontImages/starryNight.gif")} /> */}
           <h3 className="house-prompt">
-            <img src={require("./frontImages/chooseHouse.png")} />
+            <img className="house-title" src={require("./frontImages/chooseHouse.png")} />
           </h3>
           {/* <h2 className="house-results">{this.state.results}</h2> */}
           <img className="house-image" src={this.state.resultsImage} />

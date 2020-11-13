@@ -91,7 +91,7 @@ class Flood extends Component {
       <div className="welcome-background2">
         <div className="color-container">
           <div className="color-title">
-          <img src={require("./floodTitle.png")} />
+          <img className="color-top" src={require("./floodTitle.png")} />
           </div>
           <div className="content">
             <div className="header">

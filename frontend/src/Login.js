@@ -24,6 +24,9 @@ class Login extends Component {
     return (
       <div className="wrapper">
         <div className="login">
+          <h3 className='login-prompt'>
+            <img src={require("./frontImages/loginprompt2.png")} />
+          </h3>
           <form onSubmit={this.handleLogIn}>
             <div className="form-group">
               <input
