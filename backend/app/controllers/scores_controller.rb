@@ -3,13 +3,21 @@ class ScoresController < ApplicationController
 
     def index
         scores = Score.all
-        render json: scores
+        render json: scores.to_json(:include => {
+            :user => {:only => [:username]},
+            :scoreboard => {:only => [:name]}
+        })
     end
 
     def create
+        # byebug
         user = User.find_by(username: user_params[:user])
-        score = Score.create(points: user_params[:score], user_id: user.id, scoreboard_id: Scoreboard.last.id)
-        render json: score
+        if user == nil 
+            score = Score.create(points: user_params[:score], user_id: User.first.id, scoreboard_id: Scoreboard.last.id)
+        else
+            score = Score.create(points: user_params[:score], user_id: user.id, scoreboard_id: Scoreboard.last.id)
+            render json: score
+        end
     end
 
     private
