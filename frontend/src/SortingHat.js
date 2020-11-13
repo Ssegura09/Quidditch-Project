@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import houses from "./houseData";
-const hat = "https://newcastlebeach.org/images/harry-potter-sorting-hat-1.jpg";
+const hat = "https://media1.tenor.com/images/426045f4dc47e5bfaaa2b095ed179895/tenor.gif?itemid=13986854";
 
 class SortingHat extends Component {
   state = {
@@ -24,11 +24,11 @@ class SortingHat extends Component {
 
   render() {
     return (
-      <div className="welcome-background">
+      <div className="welcome-background2">
         <div className="sort-hat-container">
-          <h3 
-          className="house-prompt">
-            <img src={require('./frontImages/chooseHouse.png')} />
+          {/* <img className="starry-night" src={require("./frontImages/starryNight.gif")} /> */}
+          <h3 className="house-prompt">
+            <img src={require("./frontImages/chooseHouse.png")} />
           </h3>
           {/* <h2 className="house-results">{this.state.results}</h2> */}
           <img className="house-image" src={this.state.resultsImage} />

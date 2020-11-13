@@ -4,10 +4,10 @@ class Home extends Component {
   render() {
     return (
       <div className="welcome-background">
-        <h3 
+        <div 
         className="welcome-greeting">
-          <img src={require('./frontImages/Quidditch.png')} />
-        </h3>
+          <img src={require('./frontImages/NewQuidditch.png')} />
+        </div>
       </div>
     );
   }

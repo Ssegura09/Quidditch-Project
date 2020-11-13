@@ -22,8 +22,8 @@ class Nav extends React.Component {
               Games
               <div className="dropdown-content">
                 <Link to="/sortinghat">Sorting Hat</Link>
-                <Link to="/memory">Memory Game</Link>
-                <Link to="/flood">Color Flood</Link>
+                <Link to="/memory">Pensieve Card Game</Link>
+                <Link to="/flood">Hogwarts House Color Flood</Link>
                 <Link to="/puzzle">Picture Puzzle</Link>
               </div>
             </li>

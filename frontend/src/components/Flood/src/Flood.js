@@ -88,11 +88,14 @@ class Flood extends Component {
 
   render() {
     return (
-      <div className="welcome-background">
+
+      <div className="welcome-background2">
         <div className = "color-container">
           <div className="content">
             <div className="header">
-              <h1 className="title">Hogwarts House Color Flood</h1>
+              <h1 className="title">
+              {/* <img src={require("./floodTitle.png")} /> */}
+              </h1>
               <div className="newgame" onClick={(e) => this.restart()}>
                 New Game
               </div>
