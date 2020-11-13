@@ -30,7 +30,7 @@
 /* ---- puzzle container for formatting ---- */
 
 .puzzle-container {
-  background-image: url(frontImages/lights.gif);
+  background-image: url(frontImages/puzzleback.gif);
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
