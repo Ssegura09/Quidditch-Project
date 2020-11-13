@@ -38,7 +38,7 @@
   height: 500px;
   width: 400px;
   position: relative;
-  border: 3px solid green;
+  border: 3px solid rgb(221, 218, 12);
 }
 
 .puzzle-board {
@@ -84,6 +84,7 @@
 .house-image {
   height: 230px;
   width: 230px;
+  border-radius: 8px;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -96,6 +97,7 @@
   background-image: url(frontImages/hall.gif);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 400px;
   width: 400px;
   position: relative;
@@ -118,7 +120,7 @@
 }
 
 .color-title {
-  background-color: #4CAF50;
+  background-color: #d6110b;
   position: center;
 }
 
