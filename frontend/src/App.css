@@ -87,6 +87,41 @@
   width: 300px;
   border: 3px solid green;
 }
+.flood-container {
+  background-color: white;
+  height: auto;
+  width: auto;
+  position: center;
+  top: 50;
+  bottom: 50px;
+  right: 50;
+  border: 3px solid green;
+}
+
+.customers{
+  width: 100%;
+}
+
+.customers td{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.customers th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.customers tr:hover {background-color: #ddd;}
+
+.customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
 
 .sort-hat-button {
   margin: 0;
