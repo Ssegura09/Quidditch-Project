@@ -10,6 +10,7 @@ import Umbridge from './Umbridge.jpeg'
 import Voldemort from './Voldemort.jpg'
 import Hogwarts from './Hogwarts.jpg'
 
+
 export let images =[
     {name: 'Bellatrix',
     pic: Bellatrix,
