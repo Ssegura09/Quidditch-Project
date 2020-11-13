@@ -1,26 +1,24 @@
 /* ---- home page ---- */
 .welcome-background {
   background-image: url(frontImages/quidditchFlying.gif);
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   height: 90vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
- 
 }
 
 .welcome-background2 {
   background: url(frontImages/mainImage.png) no-repeat center center fixed;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   height: 90vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
- 
 }
 
 /* .welcome-greeting {
@@ -32,7 +30,9 @@
 /* ---- puzzle container for formatting ---- */
 
 .puzzle-container {
-  background-color: white;
+  background-image: url(frontImages/lights.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
   justify-content: center;
   align-items: center;
   height: 500px;
@@ -93,8 +93,8 @@
 }
 
 .sort-hat-container {
-  background-image: url(frontImages/starryNight.gif);
-  background-repeat: no-repeat; 
+  background-image: url(frontImages/hall.gif);
+  background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
   width: 400px;
@@ -105,6 +105,7 @@
   width: 400px;
   border: 3px solid green;
 }
+/* <---- color flood ----> */
 .flood-container {
   background-color: white;
   height: auto;
@@ -116,28 +117,39 @@
   border: 3px solid green;
 }
 
-.customers{
+.color-title {
+  background-color: #4CAF50;
+  position: center;
+}
+
+/* <---- color flood ----> */
+
+.customers {
   width: 100%;
 }
 
-.customers td{
+.customers td {
   border: 1px solid #ddd;
   padding: 8px;
 }
-.customers th{
+.customers th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-.customers tr:nth-child(even){background-color: #f2f2f2;}
+.customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-.customers tr:hover {background-color: #ddd;}
+.customers tr:hover {
+  background-color: #ddd;
+}
 
 .customers th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
@@ -196,9 +208,9 @@ li a {
   overflow: visible;
 }
 li a:hover {
- background-color: rgb(255, 255, 255);
- overflow: visible;
-}  
+  background-color: rgb(255, 255, 255);
+  overflow: visible;
+}
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
@@ -320,3 +332,4 @@ button {
   height: 120px;
   width: 120px;
 }
+

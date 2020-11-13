@@ -27,7 +27,7 @@ class Flood extends Component {
   incrementCount() {
     this.setState({
       count: this.state.count + 1,
-      user: ''
+      user: "",
     });
   }
 
@@ -43,29 +43,29 @@ class Flood extends Component {
         body: JSON.stringify({
           name: "Color Flood",
           highscore: `${this.state.count}`,
-          user: `${this.props.user.username}`
-        })
+          user: `${this.props.user.username}`,
+        }),
       };
       fetch("http://localhost:3000/scoreboards", requestOptions)
         .then((res) => res.json())
         .then((data) => console.log(data));
 
-      fetch('http://localhost:3000/scores',{
+      fetch("http://localhost:3000/scores", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json",
-          Authorization: `Bearer ${localStorage.token}`
+          Accept: "application/json",
+          Authorization: `Bearer ${localStorage.token}`,
         },
         body: JSON.stringify({
-          score:{
+          score: {
             score: `${this.state.count}`,
-            user: `${this.props.user.username}`,        
-          }
-        })
+            user: `${this.props.user.username}`,
+          },
+        }),
       })
-      // .then(res => res.json())
-      .then(data => console.log('this is my scores', data))
+        // .then(res => res.json())
+        .then((data) => console.log("this is my scores", data));
     }
 
     this.setState({
@@ -88,14 +88,14 @@ class Flood extends Component {
 
   render() {
     return (
-
       <div className="welcome-background2">
-        <div className = "color-container">
+        <div className="color-container">
+          <div className="color-title">
+          <img src={require("./floodTitle.png")} />
+          </div>
           <div className="content">
             <div className="header">
-              <h1 className="title">
-              {/* <img src={require("./floodTitle.png")} /> */}
-              </h1>
+              <h1 className="title"></h1>
               <div className="newgame" onClick={(e) => this.restart()}>
                 New Game
               </div>
@@ -125,8 +125,8 @@ class Flood extends Component {
               colors={this.state.colors}
               size={this.state.size}
             />
-            <div className='flood-container'>
-            <Leaderboard />
+            <div className="flood-container">
+              <Leaderboard />
             </div>
           </div>
         </div>
