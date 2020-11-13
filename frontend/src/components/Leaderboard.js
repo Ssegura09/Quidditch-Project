@@ -29,7 +29,7 @@ class Leaderboard extends Component {
   }
   render() {
     return (
-      <table>
+      <table className="customers">
         <thead>
           <th>Game</th>
           <th>Username</th>

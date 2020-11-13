@@ -89,7 +89,7 @@ class Flood extends Component {
   render() {
     return (
       <div className="welcome-background">
-        <div className = "flood-container">
+        <div className = "color-container">
           <div className="content">
             <div className="header">
               <h1 className="title">Hogwarts House Color Flood</h1>
@@ -122,7 +122,9 @@ class Flood extends Component {
               colors={this.state.colors}
               size={this.state.size}
             />
+            <div className='flood-container'>
             <Leaderboard />
+            </div>
           </div>
         </div>
       </div>
