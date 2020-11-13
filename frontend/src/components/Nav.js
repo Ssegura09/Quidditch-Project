@@ -24,7 +24,7 @@ class Nav extends React.Component {
                 <Link to="/sortinghat">Sorting Hat</Link>
                 <Link to="/memory">Pensieve Card Game</Link>
                 <Link to="/flood">Hogwarts House Color Flood</Link>
-                <Link to="/puzzle">Picture Puzzle</Link>
+                <Link to="/puzzle">Riddikulus Puzzle</Link>
               </div>
             </li>
           ) : null}
