@@ -33,9 +33,7 @@ class Leaderboard extends Component {
             />
           );
         });
-        this.setState({ table }, () =>{
-          this.fetchData()
-        });
+        this.setState({ table });
       });
   };
   

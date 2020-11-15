@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import houses from "./houseData";
-const hat = "https://media1.tenor.com/images/426045f4dc47e5bfaaa2b095ed179895/tenor.gif?itemid=13986854";
+const hat = require("./frontImages/angryhat.gif")
 
 class SortingHat extends Component {
   state = {

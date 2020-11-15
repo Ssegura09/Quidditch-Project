@@ -7,7 +7,7 @@ class Navbar extends React.Component {
     return (
       <div className="navbar">
         <div className="game-title">
-        <img src={require("./Images/pensieve.png")} />
+        <img className="game-top" src={require("./Images/pensieve.png")} />
         </div>
         <div className="name">{name}</div>
         <div className="score">Score: {score}</div>

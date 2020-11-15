@@ -39,7 +39,7 @@
   height: 500px;
   width: 400px;
   position: relative;
-  border: 3px solid rgb(221, 218, 12);
+  border: 3px solid #F3C01B;
 }
 
 .puzzle-board {
@@ -246,7 +246,8 @@ li a:hover {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: #111;
+  /* background-color: #111; */
+  background-color: white;
 }
 
 .title {
@@ -258,6 +259,14 @@ li a:hover {
   display: flex;
   box-shadow: 4px 4px 6px gray;
   justify-content: space-between;
+}
+
+.game-title {
+  background-color: #F3C01B;
+  display: block;
+  margin-left: 40%;
+  margin-right: auto;
+  border-radius: 8px;
 }
 
 .images {
